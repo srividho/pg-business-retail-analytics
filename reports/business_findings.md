@@ -2,11 +2,10 @@
 
 ## P&G Business & Retail Analytics --- Public Data Case Study
 
-**Project status:** Descriptive analysis completed; dashboard and
-publication preparation remain\
-**Prepared by:** Project author\
-**Tools:** Python, pandas, NumPy, Matplotlib, SQLite, SQL\
-**Dataset period:** 21 January 2022 -- 31 December 2024
+**Project status:** Data analysis, SQL queries, visualisations, Power BI dashboards, and GitHub publication completed.
+**Prepared by:** Sriram VELMURUGAN
+**Tools:** Python, pandas, NumPy, Matplotlib, SQLite, SQL, Power BI, Git and GitHub
+**Dataset period:** 21 January 2022 – 31 December 2024
 
 ------------------------------------------------------------------------
 
@@ -69,12 +68,9 @@ Reports](https://www.pginvestor.com/financials/annual-reports/default.aspx) -
 [P&G FY2026 Financial
 Highlights](https://us.pg.com/annualreport2026/financial-highlights/)
 
-The project contains a small CSV of selected annual financial highlights
-for fiscal years 2022--2026. The values were entered as rounded figures
-for exploratory trend analysis. Before public release, each value should
-be checked against the relevant official annual report or financial
-highlights page, and the source register should record the precise
-statement/table and page where available.
+The project contains selected annual financial highlights for fiscal years 2022–2026. The ten rounded values for net sales and operating income were checked against P&G's official FY2026 Financial Highlights page.
+
+The figures are rounded company-level financial measures and are used for exploratory trend analysis. Derived metrics, including year-over-year net-sales growth and operating margin, are calculated from these rounded values.
 
 **Important:** these are company-level financial measures, not
 product-level retail sales, and should not be combined with the
@@ -349,19 +345,13 @@ avoid causal language.
 
 ## 12. P&G financial analysis: reporting notes
 
-The P&G financial analysis is a separate workstream using selected
-annual financial highlights for fiscal years 2022--2026. Derived metrics
-include year-over-year net-sales growth and operating margin.
+The P&G financial analysis uses selected annual financial highlights for FY2022–FY2026.
 
-The current CSV contains rounded headline figures. Before publishing: -
-Verify each annual figure against P&G's official annual report or
-financial highlights. - Record the exact source page/table and reporting
-period in the source register. - State that operating margin is
-calculated as operating income divided by net sales if using that
-definition. - Explain that rounded source figures can create small
-differences in calculated percentages. - Do not infer product, channel,
-or marketing-campaign performance from company-level financial
-statements.
+- The ten rounded net sales and operating income values were verified against the official P&G FY2026 Financial Highlights.
+- Year-over-year net-sales growth is calculated from consecutive annual net-sales figures.
+- Operating margin is calculated as operating income divided by net sales, multiplied by 100.
+- Rounded source figures can create small differences compared with calculations using exact financial statement values.
+- These company-level financial measures do not establish product-level, channel-level, or marketing-campaign performance.
 
 ## 13. Limitations
 
@@ -389,31 +379,68 @@ statements.
 
 ## 14. Recommendations
 
-### For this portfolio project
+### 14.1 Recommendations based on the synthetic dataset
 
--   Preserve the raw dataset and clearly separate it from processed
-    data.
--   Keep data-quality flags and document every exclusion.
--   Verify P&G financial figures and record precise source references.
--   Add tests that check expected columns, date ranges, unique keys,
-    nulls, and quality flags.
--   Add monthly record counts to help interpret trends.
--   Build a Power BI dashboard with separate pages for P&G financial
-    trends and synthetic FMCG analysis.
--   Include filters for category, channel, region, and promotion status
-    where appropriate.
--   Include clear caveats on dashboard pages and chart titles.
--   Add a reproducible setup guide and explain how to obtain the source
-    dataset.
--   Verify the dataset licence before publishing or redistributing it.
+The following recommendations are analytical considerations derived from the dataset. They are not validated business decisions or recommendations for P&G's actual operations.
 
-### For a real retail or marketing team
+**1. Investigate category-level performance**
 
-If real, authorised retail data became available, useful additional
-fields would include transaction date, product identifier, units, net
-sales, discount amount, campaign identifier, channel, store or market,
-inventory, cost, and margin. Access controls, privacy requirements, and
-data-use permissions should be established before analysis.
+Yogurt represents the largest category by recorded units sold and revenue proxy, while Juice has the smallest totals.
+
+For a real retail business, investigate whether these differences are associated with product demand, distribution coverage, product availability, pricing, or differences in transaction volume.
+
+**2. Evaluate sales channels using additional performance indicators**
+
+The three channels have relatively similar total units sold and revenue proxies in this dataset.
+
+A real channel-performance assessment should also consider gross margin, fulfilment costs, customer acquisition costs, returns, and order volumes before identifying the most effective channel.
+
+**3. Conduct a controlled promotion effectiveness analysis**
+
+Promotional records show higher average units sold across all 15 category–channel combinations.
+
+This is an observed association in synthetic data, not proof of promotional effectiveness.
+
+For real campaign evaluation, compare similar products and periods, account for seasonality and stock availability, and use an appropriate experimental or quasi-experimental design.
+
+**4. Strengthen inventory and data-quality monitoring**
+
+Three records contain negative stock or quantity values.
+
+A production analytics pipeline should implement automated validation rules, anomaly reporting, and documented handling procedures. Negative values should be investigated rather than automatically deleted because they may represent legitimate returns or adjustments.
+
+**5. Improve reporting consistency**
+
+Monthly totals should be interpreted alongside record counts and data coverage. Partial periods, missing observations, and changes in reporting volume can distort comparisons.
+
+A real business dashboard should display data completeness indicators alongside key performance metrics.
+
+### 14.2 Additional data required for real business decisions
+
+A more reliable retail and marketing analysis would benefit from:
+
+- Transaction-level sales and order identifiers.
+- Product costs and gross margins.
+- Actual discounts and campaign expenditure.
+- Campaign identifiers and campaign dates.
+- Inventory availability and stockout records.
+- Store, market, and customer-segment information.
+- Returns, cancellations, and fulfilment costs.
+
+These fields would support more meaningful analysis of product performance, channel contribution, promotion effectiveness, and profitability.
+
+### 14.3 Portfolio project improvements
+
+The completed project demonstrates the following capabilities:
+
+- Python-based data profiling and descriptive analysis.
+- SQL-based business aggregation using SQLite.
+- Financial trend analysis using public P&G information.
+- Data-quality flagging and validation.
+- Power BI dashboard development.
+- Documentation of sources, assumptions, and limitations.
+
+Potential future enhancements include automated data-quality tests, monthly coverage monitoring, and a more reproducible data-refresh workflow.
 
 ## 15. Reproducibility and project structure
 
