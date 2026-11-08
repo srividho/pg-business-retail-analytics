@@ -1,0 +1,36 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+
+# Raw and processed datasets
+# Source data stays local until licensing and reproducibility are reviewed
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Generated chart images: include portfolio figures in Git
+# Keep other temporary report outputs excluded if needed
+
+# Editor and temporary files
+.vscode/
+.idea/
+*.swp
+*.tmp
