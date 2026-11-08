@@ -92,27 +92,27 @@ Current Python visualisations:
 
 ## Power BI Dashboards
 
-Three Power BI reports were developed:
+Two interactive Power BI dashboards were developed and exported as PDF reports.
 
-1. **P&G Financial Performance Dashboard**
-   - Net sales trends (FY2022–FY2026).
-   - Operating income trends.
-   - Operating margin.
-   - Financial KPI cards and comparison visuals.
+### 1. FMCG Retail Analytics Dashboard
 
-2. **FMCG Retail Analytics Dashboard**
-   - Total units sold.
-   - Category and channel analysis.
-   - Promotion comparisons.
-   - Region and date filtering.
+- Total units sold and category analysis.
+- Sales channel comparisons.
+- Promotion analysis.
+- Region and date filtering.
 
-3. **FMCG Dashboard — Data Quality and Performance**
-   - Total units sold and flagged records.
-   - Daily revenue proxy trend.
-   - Category and promotion analysis.
-   - Sales channel, region, and date filtering.
+[View FMCG Dashboard (PDF)](FMCG_Dashboard.pdf)
 
-The Power BI reports are hosted in Power BI Service. The repository does not currently include PBIX files.
+### 2. P&G Financial Performance Dashboard
+
+- Net sales trends (FY2022–FY2026).
+- Operating income trends.
+- Operating margin analysis.
+- Financial KPI cards and comparisons.
+
+[View P&G Financial Dashboard (PDF)](P%26G%20Financial%20Performance%20Dashboard.pdf)
+
+The repository also includes the original Power BI files (`.pbix`) in the `powerbi/` directory.
 
 ## Data Sources
 
