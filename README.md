@@ -173,18 +173,6 @@ Run the Python validation and analysis scripts, load the data into SQLite, execu
 - P&G financial highlights use rounded figures.
 - The FMCG dataset licence must be checked before redistribution.
 
-## Project Status
-
-- [x] Data inspection and quality profiling
-- [x] Python descriptive analysis
-- [x] SQLite database and SQL analysis
-- [x] Core visualisations
-- [x] Business findings report
-- [x] P&G financial source figures verified
-- [x] Data dictionary and source register
-- [x] Power BI dashboards
-- [ ] Final repository review
-- [ ] Publish project to GitHub
 
 ## Portfolio Summary
 
